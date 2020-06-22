@@ -1,0 +1,547 @@
+@import '../fonts/remixicon.css';
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@900&family=Montserrat:wght@400;700;900&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 1160px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  height: 45px;
+  margin-top: 60px;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+}
+header .menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  border: 1px solid #DCDCDC;
+  background: #fff;
+  transition: 0.4s;
+}
+header .menu-icon:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+header .logo {
+  width: 130px;
+}
+header .logo img {
+  width: 100%;
+}
+header .socials ul {
+  display: flex;
+}
+header .socials ul li {
+  margin-left: 8px;
+}
+
+.nav-principal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -120%;
+  left: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.8s;
+  z-index: 999;
+}
+.nav-principal .close-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  border: 1px solid #DCDCDC;
+  background: #fff;
+  transition: 0.4s;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+.nav-principal .close-menu:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+.nav-principal ul {
+  text-align: center;
+}
+.nav-principal ul li {
+  font-size: 2em;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.menu-toggle .nav-principal {
+  top: 0;
+}
+
+.title-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+}
+.title-button h2 {
+  font-family: "Martel", sans-serif;
+  font-size: 1.3em;
+  line-height: 1.2;
+}
+
+.btn {
+  width: 180px;
+  height: 45px;
+  background: #DCDCDC;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: 0.4s;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn.btn-line {
+  border: 1px solid #DCDCDC;
+  background: #fff;
+}
+.btn.btn-line:hover {
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+}
+.btn.btn-fill {
+  background: #000;
+  color: #fff;
+  border: none;
+}
+.btn.btn-fill:hover {
+  border: 1px solid #DCDCDC;
+  background: #fff;
+  color: #000;
+}
+
+.list-post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post {
+  width: 23%;
+  margin-bottom: 24px;
+  transition: 0.4s;
+}
+.post .thumbnail {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.post h3 {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.post p {
+  font-size: 0.8em;
+  color: #9B9B9B;
+  font-weight: 4000;
+}
+.post:hover {
+  transform: scale(1.05);
+}
+
+.list-works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work {
+  width: 31.5%;
+  margin-bottom: 24px;
+  transition: 0.4s;
+}
+.work .thumbnail {
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.work h3 {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.work p {
+  font-size: 0.8em;
+  color: #9B9B9B;
+  font-weight: 4000;
+}
+.work:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  margin-bottom: 32px;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container .copy img {
+  width: 200px;
+}
+footer .container .copy p {
+  font-size: 0.8em;
+  color: #9B9B9B;
+}
+footer .container .nav-footer ul {
+  text-align: right;
+}
+footer .container .nav-footer ul li {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+form {
+  width: 100%;
+}
+
+input[type=text], input[type=email] {
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 8px;
+  border: 1px solid #DCDCDC;
+  border-radius: 4px;
+  padding: 0 16px;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 145px;
+  margin-bottom: 8px;
+  border: 1px solid #DCDCDC;
+  border-radius: 4px;
+  padding: 16px;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pagination a {
+  width: 180px;
+  height: 45px;
+  background: #DCDCDC;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: 0.4s;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 8px;
+}
+
+@media screen and (max-width: 1160px) {
+  .container {
+    width: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 800px;
+  }
+
+  .post {
+    width: 48%;
+  }
+
+  .work {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    width: 640px;
+  }
+
+  .post {
+    width: 100%;
+  }
+
+  .work {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .container {
+    width: 400px;
+  }
+
+  footer .container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  footer .container .copy {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  footer .container .nav-footer ul {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+}
+.head-title .container {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.head-title .container h1 {
+  font-size: 1.5em;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.head-title .container h1 span {
+  font-family: "Martel", sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+}
+
+.last-posts_title {
+  margin-bottom: 24px;
+}
+
+.last-posts {
+  margin-bottom: 40px;
+}
+
+.last-works_title {
+  margin-bottom: 24px;
+}
+
+.last-works {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 400px) {
+  .head-title .container h1 span {
+    font-size: 2em;
+  }
+}
+.page-container {
+  margin-top: 40px;
+}
+.page-container h1 {
+  text-align: center;
+  font-family: "Martel", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+.page-container .content {
+  width: 80%;
+  margin: 0 auto 40px auto;
+}
+.page-container .content p {
+  line-height: 1.4;
+  font-size: 1.1em;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 640px) {
+  .page-container .content {
+    width: 100%;
+  }
+}
+.single-post {
+  margin-top: 40px;
+}
+.single-post h1 {
+  text-align: center;
+  font-family: "Martel", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.single-post .info {
+  font-size: 0.8em;
+  color: #9B9B9B;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.single-post .thumbnail {
+  width: 100%;
+  height: 430px;
+  background-position: center center;
+  background-size: cover;
+  background-size: cover;
+  border-radius: 20px;
+  margin-bottom: 32px;
+}
+.single-post .content {
+  width: 80%;
+  margin: 0 auto 40px auto;
+}
+.single-post .content p {
+  line-height: 1.4;
+  font-size: 1.1em;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 640px) {
+  .single-post .thumbnail {
+    height: 250px;
+  }
+  .single-post .content {
+    width: 100%;
+  }
+}
+.single-work-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.single-work-container .image {
+  width: 48%;
+}
+.single-work-container .image img {
+  width: 100%;
+  border-radius: 20px;
+  height: auto;
+}
+.single-work-container .info-work {
+  width: 48%;
+}
+.single-work-container .info-work h1 {
+  font-family: "Martel", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+.single-work-container .info-work p {
+  margin-bottom: 16px;
+}
+
+.list-post-page {
+  margin: 40px 0;
+}
+.list-post-page h1 {
+  text-align: center;
+  font-family: "Martel", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.list-work-page {
+  margin: 40px 0;
+}
+.list-work-page h1 {
+  text-align: center;
+  font-family: "Martel", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/*# sourceMappingURL=app.css.map */

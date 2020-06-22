@@ -1,0 +1,32 @@
+.single-work-container {
+  margin-top: space(5);
+  margin-bottom: space(5);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .image {
+    width: 48%;
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+      height: auto;
+    }
+  }
+
+  .info-work {
+    width: 48%;
+
+    h1{
+      font-family: $martel;
+      font-size: 2.5em;
+      margin-bottom: space(3);
+      line-height: 1.2;
+    }  
+
+    p {
+      margin-bottom: space(2);
+    }
+  }
+}
